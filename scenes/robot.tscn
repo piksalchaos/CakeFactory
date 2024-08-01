@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dft15jplik5ow"]
 
-[ext_resource type="Script" path="res://robot.gd" id="1_3f6kr"]
+[ext_resource type="Script" path="res://scripts/robot.gd" id="1_3f6kr"]
 [ext_resource type="Texture2D" uid="uid://27vl4qk70e0l" path="res://icon.svg" id="1_yri0m"]
-[ext_resource type="PackedScene" uid="uid://b8ydroxkeu1na" path="res://conveyor_belt.tscn" id="3_qlrgj"]
+[ext_resource type="PackedScene" uid="uid://b8ydroxkeu1na" path="res://scenes/conveyor_belt.tscn" id="3_qlrgj"]
 
 [node name="Robot" type="Node2D"]
 script = ExtResource("1_3f6kr")

@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgiywwbegoath"]
+
+[ext_resource type="PackedScene" uid="uid://dft15jplik5ow" path="res://scenes/robot.tscn" id="1_5sdxi"]
+[ext_resource type="PackedScene" uid="uid://b8ydroxkeu1na" path="res://scenes/conveyor_belt.tscn" id="2_o8igl"]
+[ext_resource type="PackedScene" uid="uid://dhlqofibjtb1r" path="res://scenes/cake.tscn" id="3_7ij8r"]
+
+[node name="Game" type="Node2D"]
+
+[node name="LeftRobot" parent="." instance=ExtResource("1_5sdxi")]
+position = Vector2(347, 351)
+up_input_action = "left_up"
+down_input_action = "left_down"
+
+[node name="MiddleRobot" parent="." instance=ExtResource("1_5sdxi")]
+position = Vector2(638, 355)
+
+[node name="RightRobot" parent="." instance=ExtResource("1_5sdxi")]
+position = Vector2(923, 350)
+up_input_action = "right_up"
+down_input_action = "right_down"
+
+[node name="ConveyorBelts" type="Node" parent="."]
+
+[node name="ConveyorBelt" parent="ConveyorBelts" instance=ExtResource("2_o8igl")]
+position = Vector2(782, 213)
+
+[node name="ConveyorBelt2" parent="ConveyorBelts" instance=ExtResource("2_o8igl")]
+position = Vector2(780, 351)
+
+[node name="ConveyorBelt3" parent="ConveyorBelts" instance=ExtResource("2_o8igl")]
+position = Vector2(773, 497)
+
+[node name="ConveyorBelt4" parent="ConveyorBelts" instance=ExtResource("2_o8igl")]
+position = Vector2(495, 208)
+
+[node name="ConveyorBelt5" parent="ConveyorBelts" instance=ExtResource("2_o8igl")]
+position = Vector2(490, 354)
+
+[node name="ConveyorBelt6" parent="ConveyorBelts" instance=ExtResource("2_o8igl")]
+position = Vector2(493, 493)
+
+[node name="ConveyorBelt7" parent="ConveyorBelts" instance=ExtResource("2_o8igl")]
+position = Vector2(207, 206)
+
+[node name="ConveyorBelt8" parent="ConveyorBelts" instance=ExtResource("2_o8igl")]
+position = Vector2(202, 352)
+
+[node name="ConveyorBelt9" parent="ConveyorBelts" instance=ExtResource("2_o8igl")]
+position = Vector2(205, 491)
+
+[node name="ConveyorBelt10" parent="ConveyorBelts" instance=ExtResource("2_o8igl")]
+position = Vector2(1065, 351)
+
+[node name="Cake" parent="." instance=ExtResource("3_7ij8r")]
+position = Vector2(1055, 345)
