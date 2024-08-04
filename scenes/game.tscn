@@ -1,9 +1,64 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgiywwbegoath"]
+[gd_scene load_steps=15 format=3 uid="uid://cgiywwbegoath"]
 
 [ext_resource type="PackedScene" uid="uid://dft15jplik5ow" path="res://scenes/robot.tscn" id="1_5sdxi"]
 [ext_resource type="PackedScene" uid="uid://b8ydroxkeu1na" path="res://scenes/conveyor_belt.tscn" id="2_o8igl"]
 [ext_resource type="PackedScene" uid="uid://dhlqofibjtb1r" path="res://scenes/cake.tscn" id="3_7ij8r"]
 [ext_resource type="PackedScene" uid="uid://b8lt17ktrp3p1" path="res://scenes/machine.tscn" id="4_cr101"]
+[ext_resource type="Script" path="res://scripts/CakeBuild.gd" id="4_tfl45"]
+
+[sub_resource type="Resource" id="Resource_mdrqd"]
+script = ExtResource("4_tfl45")
+flavor = 1
+icing = 0
+toppings = 0
+
+[sub_resource type="Resource" id="Resource_rkna6"]
+script = ExtResource("4_tfl45")
+flavor = 2
+icing = 0
+toppings = 0
+
+[sub_resource type="Resource" id="Resource_e8h2k"]
+script = ExtResource("4_tfl45")
+flavor = 3
+icing = 0
+toppings = 0
+
+[sub_resource type="Resource" id="Resource_m2rt3"]
+script = ExtResource("4_tfl45")
+flavor = 0
+icing = 1
+toppings = 0
+
+[sub_resource type="Resource" id="Resource_lttci"]
+script = ExtResource("4_tfl45")
+flavor = 0
+icing = 2
+toppings = 0
+
+[sub_resource type="Resource" id="Resource_cggh6"]
+script = ExtResource("4_tfl45")
+flavor = 0
+icing = 3
+toppings = 0
+
+[sub_resource type="Resource" id="Resource_rhmr0"]
+script = ExtResource("4_tfl45")
+flavor = 0
+icing = 0
+toppings = 1
+
+[sub_resource type="Resource" id="Resource_ymehe"]
+script = ExtResource("4_tfl45")
+flavor = 0
+icing = 0
+toppings = 2
+
+[sub_resource type="Resource" id="Resource_yy0f8"]
+script = ExtResource("4_tfl45")
+flavor = 0
+icing = 0
+toppings = 3
 
 [node name="Game" type="Node2D"]
 
@@ -56,31 +111,40 @@ position = Vector2(1065, 351)
 
 [node name="Machines" type="Node" parent="."]
 
-[node name="Machine" parent="Machines" instance=ExtResource("4_cr101")]
+[node name="VanillaFlavorMachine" parent="Machines" instance=ExtResource("4_cr101")]
+cake_build_elements = SubResource("Resource_mdrqd")
 
-[node name="Machine2" parent="Machines" instance=ExtResource("4_cr101")]
+[node name="ChocolateFlavorMachine" parent="Machines" instance=ExtResource("4_cr101")]
 position = Vector2(780, 353)
+cake_build_elements = SubResource("Resource_rkna6")
 
-[node name="Machine3" parent="Machines" instance=ExtResource("4_cr101")]
+[node name="IceCreamFlavorMachine" parent="Machines" instance=ExtResource("4_cr101")]
 position = Vector2(777, 494)
+cake_build_elements = SubResource("Resource_e8h2k")
 
-[node name="Machine4" parent="Machines" instance=ExtResource("4_cr101")]
+[node name="VanillaIcingMachine" parent="Machines" instance=ExtResource("4_cr101")]
 position = Vector2(488, 204)
+cake_build_elements = SubResource("Resource_m2rt3")
 
-[node name="Machine5" parent="Machines" instance=ExtResource("4_cr101")]
+[node name="ChocolateIcingMachine" parent="Machines" instance=ExtResource("4_cr101")]
 position = Vector2(494, 349)
+cake_build_elements = SubResource("Resource_lttci")
 
-[node name="Machine6" parent="Machines" instance=ExtResource("4_cr101")]
+[node name="StrawberryIcingMachine" parent="Machines" instance=ExtResource("4_cr101")]
 position = Vector2(492, 499)
+cake_build_elements = SubResource("Resource_cggh6")
 
-[node name="Machine7" parent="Machines" instance=ExtResource("4_cr101")]
+[node name="FruitToppingsMachine" parent="Machines" instance=ExtResource("4_cr101")]
 position = Vector2(202, 197)
+cake_build_elements = SubResource("Resource_rhmr0")
 
-[node name="Machine8" parent="Machines" instance=ExtResource("4_cr101")]
+[node name="CandyToppingsMachine" parent="Machines" instance=ExtResource("4_cr101")]
 position = Vector2(193, 355)
+cake_build_elements = SubResource("Resource_ymehe")
 
-[node name="Machine9" parent="Machines" instance=ExtResource("4_cr101")]
+[node name="SprinklesToppingMachine" parent="Machines" instance=ExtResource("4_cr101")]
 position = Vector2(199, 493)
+cake_build_elements = SubResource("Resource_yy0f8")
 
 [node name="Cake" parent="." instance=ExtResource("3_7ij8r")]
 position = Vector2(1055, 345)

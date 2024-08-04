@@ -1,2 +1,1 @@
-extends Area2D
-class_name ConveyorBelt
+class_name ConveyorBelt extends Area2D
