@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dhlqofibjtb1r"]
 
 [ext_resource type="Script" path="res://scripts/cake.gd" id="1_3cjvs"]
-[ext_resource type="Texture2D" uid="uid://27vl4qk70e0l" path="res://icon.svg" id="1_itih1"]
+[ext_resource type="Texture2D" uid="uid://csi73enqpwhj4" path="res://sprites/cake_placeholder_spritesheet.png" id="2_14tek"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3b4w3"]
 size = Vector2(75, 60)
@@ -9,9 +9,24 @@ size = Vector2(75, 60)
 [node name="Cake" type="Area2D"]
 script = ExtResource("1_3cjvs")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.6, 0.5)
-texture = ExtResource("1_itih1")
+[node name="CakeSprite" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.25)
+texture = ExtResource("2_14tek")
+hframes = 3
+
+[node name="FrostingSprite" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(1.5, 1.25)
+texture = ExtResource("2_14tek")
+hframes = 3
+frame = 1
+
+[node name="ToppingSprite" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(1.5, 1.25)
+texture = ExtResource("2_14tek")
+hframes = 3
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_3b4w3")

@@ -2,7 +2,15 @@ extends Area2D
 class_name Cake
 
 @export var speed: float = 100.0
+
+@onready var frosting_sprite = $FrostingSprite
+@onready var topping_sprite = $ToppingSprite
+
 var is_moving: bool = true
+
+func _ready():
+	frosting_sprite.visible = false
+	topping_sprite.visible = false
 
 func _process(delta: float):
 	if is_moving:
