@@ -60,7 +60,7 @@ flavor = 0
 icing = 0
 toppings = 3
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node"]
 
 [node name="Robots" type="Node" parent="."]
 
@@ -149,14 +149,15 @@ cake_build_elements = SubResource("Resource_yy0f8")
 [node name="Cake" parent="." instance=ExtResource("3_7ij8r")]
 position = Vector2(1055, 345)
 
-[node name="Control" type="Control" parent="."]
-z_index = 2
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="Control"]
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
 layout_mode = 0
 offset_left = 164.0
 offset_top = 111.0
@@ -178,7 +179,7 @@ Candy
 
 Sprinkles"
 
-[node name="Label2" type="Label" parent="Control"]
+[node name="Label2" type="Label" parent="CanvasLayer/Control"]
 layout_mode = 0
 offset_left = 452.0
 offset_top = 112.0
@@ -200,7 +201,7 @@ Chocolate
 
 Strawberry"
 
-[node name="Label3" type="Label" parent="Control"]
+[node name="Label3" type="Label" parent="CanvasLayer/Control"]
 layout_mode = 0
 offset_left = 733.0
 offset_top = 115.0

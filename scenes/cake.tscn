@@ -14,5 +14,16 @@ script = ExtResource("1_3cjvs")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_3b4w3")
 
+[node name="ElementsLabel" type="Label" parent="."]
+offset_left = -55.0
+offset_top = -133.0
+offset_right = 44.0
+offset_bottom = -13.0
+theme_override_font_sizes/font_size = 14
+text = "lkjlkjlkj"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
