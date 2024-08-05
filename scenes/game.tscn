@@ -147,7 +147,7 @@ position = Vector2(199, 493)
 cake_build_elements = SubResource("Resource_yy0f8")
 
 [node name="Cake" parent="." instance=ExtResource("3_7ij8r")]
-position = Vector2(1055, 345)
+position = Vector2(1065, 350)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

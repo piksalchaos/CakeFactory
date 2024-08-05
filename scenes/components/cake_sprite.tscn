@@ -1,13 +1,13 @@
 [gd_scene load_steps=6 format=3 uid="uid://d1wh3w75t7lnx"]
 
-[ext_resource type="Script" path="res://scripts/components/cake_sprite.gd" id="1_ywj31"]
+[ext_resource type="Script" path="res://scripts/components/cake_sprite.gd" id="1_ys7m5"]
 [ext_resource type="Texture2D" uid="uid://ch1h54wx2amg7" path="res://images/cake_ingredients.png" id="2_mbhmu"]
 [ext_resource type="Texture2D" uid="uid://c06sb0ksut6qn" path="res://images/cake_bases_placeholder_spritesheet.png" id="3_wh76y"]
 [ext_resource type="Texture2D" uid="uid://cwvo22jgbpyba" path="res://images/cakes_with_icing_placeholder_spritesheet.png" id="4_8ikw3"]
 [ext_resource type="Texture2D" uid="uid://ps2i5y7lofsk" path="res://images/cake_toppings_placeholder_spritesheet.png" id="5_qemrx"]
 
 [node name="CakeSprite" type="Sprite2D"]
-script = ExtResource("1_ywj31")
+script = ExtResource("1_ys7m5")
 
 [node name="IngredientsSprite" type="Sprite2D" parent="."]
 visible = false

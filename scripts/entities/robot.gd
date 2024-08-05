@@ -12,7 +12,7 @@ enum Placement {
 @export var down_input_action: String = 'middle_down'
 @export var placement: int = Placement.MIDDLE
 
-@onready var conveyor_belt = $ConveyorBelt
+@onready var cake_detection_area := $CakeDetectionArea
 
 var screen_size: Vector2
 
@@ -31,6 +31,6 @@ func _update_position():
 	var old_y_position = position.y
 	position.y = placement * PLACEMENT_DISTANCE + screen_size.y/2
 	var y_position_difference = position.y - old_y_position
-	for area in conveyor_belt.get_overlapping_areas():
+	for area in cake_detection_area.get_overlapping_areas():
 		if area is Cake:
 			area.position.y += y_position_difference
