@@ -157,6 +157,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 164.0
 offset_top = 111.0
 offset_right = 244.0
@@ -178,6 +179,7 @@ Candy
 Sprinkles"
 
 [node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 452.0
 offset_top = 112.0
 offset_right = 538.0
@@ -199,6 +201,7 @@ Chocolate
 Strawberry"
 
 [node name="Label3" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 733.0
 offset_top = 115.0
 offset_right = 819.0
