@@ -1,10 +1,10 @@
 [gd_scene load_steps=15 format=3 uid="uid://cgiywwbegoath"]
 
-[ext_resource type="PackedScene" uid="uid://dft15jplik5ow" path="res://scenes/robot.tscn" id="1_5sdxi"]
-[ext_resource type="PackedScene" uid="uid://b8ydroxkeu1na" path="res://scenes/conveyor_belt.tscn" id="2_o8igl"]
-[ext_resource type="PackedScene" uid="uid://dhlqofibjtb1r" path="res://scenes/cake.tscn" id="3_7ij8r"]
-[ext_resource type="PackedScene" uid="uid://b8lt17ktrp3p1" path="res://scenes/machine.tscn" id="4_cr101"]
-[ext_resource type="Script" path="res://scripts/CakeBuild.gd" id="4_tfl45"]
+[ext_resource type="PackedScene" uid="uid://dft15jplik5ow" path="res://scenes/entities/robot.tscn" id="1_5sdxi"]
+[ext_resource type="PackedScene" uid="uid://b8ydroxkeu1na" path="res://scenes/entities/conveyor_belt.tscn" id="2_o8igl"]
+[ext_resource type="PackedScene" uid="uid://dhlqofibjtb1r" path="res://scenes/entities/cake.tscn" id="3_7ij8r"]
+[ext_resource type="PackedScene" uid="uid://b8lt17ktrp3p1" path="res://scenes/entities/machine.tscn" id="4_cr101"]
+[ext_resource type="Script" path="res://scripts/classes/CakeBuild.gd" id="4_tfl45"]
 
 [sub_resource type="Resource" id="Resource_mdrqd"]
 script = ExtResource("4_tfl45")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ps2i5y7lofsk"
-path="res://.godot/imported/cake_toppings_placeholder_spritesheet.png-6d889a96bc718dafdc3f92826b809fa1.ctex"
+path="res://.godot/imported/cake_toppings_placeholder_spritesheet.png-34f47f8dfc52b139e113478b3f5ea3c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/cake_toppings_placeholder_spritesheet.png"
-dest_files=["res://.godot/imported/cake_toppings_placeholder_spritesheet.png-6d889a96bc718dafdc3f92826b809fa1.ctex"]
+source_file="res://images/cake_toppings_placeholder_spritesheet.png"
+dest_files=["res://.godot/imported/cake_toppings_placeholder_spritesheet.png-34f47f8dfc52b139e113478b3f5ea3c5.ctex"]
 
 [params]
 

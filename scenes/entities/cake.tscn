@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dhlqofibjtb1r"]
 
-[ext_resource type="Script" path="res://scripts/cake.gd" id="1_3cjvs"]
-[ext_resource type="PackedScene" uid="uid://d1wh3w75t7lnx" path="res://scenes/cake_sprite.tscn" id="2_iupr7"]
+[ext_resource type="Script" path="res://scripts/entities/cake.gd" id="1_3cjvs"]
+[ext_resource type="PackedScene" uid="uid://d1wh3w75t7lnx" path="res://scenes/components/cake_sprite.tscn" id="2_iupr7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3b4w3"]
 size = Vector2(75, 60)
@@ -20,7 +20,6 @@ offset_top = -133.0
 offset_right = 44.0
 offset_bottom = -13.0
 theme_override_font_sizes/font_size = 14
-text = "lkjlkjlkj"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false

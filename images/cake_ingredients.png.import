@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwvo22jgbpyba"
-path="res://.godot/imported/cakes_with_icing_placeholder_spritesheet.png-24cde3cb3d2b78ccc7ba18df07e88277.ctex"
+uid="uid://ch1h54wx2amg7"
+path="res://.godot/imported/cake_ingredients.png-a0b73130e834a7d2f04e12570a19ca13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/cakes_with_icing_placeholder_spritesheet.png"
-dest_files=["res://.godot/imported/cakes_with_icing_placeholder_spritesheet.png-24cde3cb3d2b78ccc7ba18df07e88277.ctex"]
+source_file="res://images/cake_ingredients.png"
+dest_files=["res://.godot/imported/cake_ingredients.png-a0b73130e834a7d2f04e12570a19ca13.ctex"]
 
 [params]
 
