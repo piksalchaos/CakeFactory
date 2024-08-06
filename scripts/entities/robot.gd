@@ -10,7 +10,7 @@ enum Placement {
 
 @export var up_input_action: String = 'middle_up'
 @export var down_input_action: String = 'middle_down'
-@export var placement: int = Placement.MIDDLE
+@export var placement: Placement = Placement.MIDDLE
 
 @onready var cake_detection_area := $CakeDetectionArea
 

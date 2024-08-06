@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1yx1rdv03eox"]
+
+[ext_resource type="PackedScene" uid="uid://dbelf5j52w3si" path="res://scenes/entities/robots/flavor_bot.tscn" id="1_iiej1"]
+[ext_resource type="PackedScene" uid="uid://dr0rkfjocm455" path="res://scenes/entities/robots/icing_bot.tscn" id="2_ivat0"]
+[ext_resource type="PackedScene" uid="uid://coiadt6fabbvl" path="res://scenes/entities/robots/toppings_bot.tscn" id="3_gbagb"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_wii81"]
+resource_name = "Robots"
+scenes/1/scene = ExtResource("1_iiej1")
+scenes/2/scene = ExtResource("2_ivat0")
+scenes/3/scene = ExtResource("3_gbagb")
+
+[sub_resource type="TileSet" id="TileSet_sa2fs"]
+tile_size = Vector2i(150, 150)
+sources/0 = SubResource("TileSetScenesCollectionSource_wii81")
+
+[node name="GameTiledversion" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_sa2fs")
+format = 2
+layer_0/tile_data = PackedInt32Array(65541, 0, 65536, 65539, 0, 131072, 65537, 0, 196608)

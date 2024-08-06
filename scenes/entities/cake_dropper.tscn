@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx5nae8gh0crj"]
+
+[ext_resource type="Texture2D" uid="uid://dcoxps8yjhn5c" path="res://images/cake_dropper.png" id="1_hkp2v"]
+[ext_resource type="Script" path="res://scripts/entities/cake_dropper.gd" id="1_t6sh5"]
+
+[node name="CakeDropper" type="Node2D"]
+position = Vector2(1058, 335)
+script = ExtResource("1_t6sh5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -100)
+scale = Vector2(2, 2)
+texture = ExtResource("1_hkp2v")
+
+[node name="CakeSpawnTimer" type="Timer" parent="."]
+wait_time = 8.0
+autostart = true
+
+[connection signal="timeout" from="CakeSpawnTimer" to="." method="_on_cake_spawn_timer_timeout"]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr0rkfjocm455"]
+
+[ext_resource type="PackedScene" uid="uid://dft15jplik5ow" path="res://scenes/entities/robots/robot.tscn" id="1_mafmy"]
+
+[node name="IcingBot" instance=ExtResource("1_mafmy")]

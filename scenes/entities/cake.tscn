@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhlqofibjtb1r"]
+[gd_scene load_steps=5 format=3 uid="uid://dhlqofibjtb1r"]
 
 [ext_resource type="Script" path="res://scripts/entities/cake.gd" id="1_3cjvs"]
 [ext_resource type="PackedScene" uid="uid://d1wh3w75t7lnx" path="res://scenes/components/cake_sprite.tscn" id="2_iupr7"]
+[ext_resource type="Texture2D" uid="uid://27vl4qk70e0l" path="res://icon.svg" id="3_k3xx2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3b4w3"]
 size = Vector2(75, 60)
@@ -15,6 +16,7 @@ script = ExtResource("1_3cjvs")
 shape = SubResource("RectangleShape2D_3b4w3")
 
 [node name="ElementsLabel" type="Label" parent="."]
+visible = false
 offset_left = -55.0
 offset_top = -133.0
 offset_right = 44.0
@@ -23,6 +25,23 @@ theme_override_font_sizes/font_size = 14
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
+
+[node name="IngredientIcons" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="IngredientIcons"]
+position = Vector2(-38, -56)
+scale = Vector2(0.265625, 0.257812)
+texture = ExtResource("3_k3xx2")
+
+[node name="Sprite2D2" type="Sprite2D" parent="IngredientIcons"]
+position = Vector2(7, -58)
+scale = Vector2(0.265625, 0.257812)
+texture = ExtResource("3_k3xx2")
+
+[node name="Sprite2D3" type="Sprite2D" parent="IngredientIcons"]
+position = Vector2(47, -57)
+scale = Vector2(0.265625, 0.257812)
+texture = ExtResource("3_k3xx2")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

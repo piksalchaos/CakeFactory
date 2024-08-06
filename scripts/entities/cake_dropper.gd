@@ -1,0 +1,10 @@
+extends Node2D
+
+@export var cake_parent_node: Node
+@onready var cake_spawn_timer := $CakeSpawnTimer
+var cake_scene := preload('res://scenes/entities/cake.tscn')
+
+func _on_cake_spawn_timer_timeout():
+	var new_cake = cake_scene.instantiate()
+	cake_parent_node.add_child(new_cake)
+	new_cake.position = position

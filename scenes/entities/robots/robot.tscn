@@ -1,21 +1,21 @@
 [gd_scene load_steps=5 format=3 uid="uid://dft15jplik5ow"]
 
-[ext_resource type="Script" path="res://scripts/entities/robot.gd" id="1_3f6kr"]
-[ext_resource type="Texture2D" uid="uid://dtruxwagg0nxk" path="res://images/robot_placeholder.png" id="2_61vfo"]
-[ext_resource type="PackedScene" uid="uid://b8ydroxkeu1na" path="res://scenes/entities/conveyor_belt.tscn" id="3_qlrgj"]
+[ext_resource type="Script" path="res://scripts/entities/robot.gd" id="1_mbqyv"]
+[ext_resource type="Texture2D" uid="uid://dtruxwagg0nxk" path="res://images/robot_placeholder.png" id="2_58vvm"]
+[ext_resource type="PackedScene" uid="uid://b8ydroxkeu1na" path="res://scenes/entities/conveyor_belt.tscn" id="3_fomy7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uu224"]
 size = Vector2(60, 150)
 
 [node name="Robot" type="Node2D"]
-script = ExtResource("1_3f6kr")
+script = ExtResource("1_mbqyv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 47)
 scale = Vector2(2, 2)
-texture = ExtResource("2_61vfo")
+texture = ExtResource("2_58vvm")
 
-[node name="ConveyorBelt" parent="." instance=ExtResource("3_qlrgj")]
+[node name="ConveyorBelt" parent="." instance=ExtResource("3_fomy7")]
 
 [node name="CakeDetectionArea" type="Area2D" parent="."]
 
