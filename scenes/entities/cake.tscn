@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/entities/cake.gd" id="1_3cjvs"]
 [ext_resource type="PackedScene" uid="uid://d1wh3w75t7lnx" path="res://scenes/components/cake_sprite.tscn" id="2_iupr7"]
-[ext_resource type="Texture2D" uid="uid://27vl4qk70e0l" path="res://icon.svg" id="3_k3xx2"]
+[ext_resource type="PackedScene" uid="uid://3t2bje7d3h4b" path="res://scenes/components/ingredient_icon.tscn" id="3_gl05t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3b4w3"]
 size = Vector2(75, 60)
@@ -27,21 +27,20 @@ theme_override_font_sizes/font_size = 14
 visible = false
 
 [node name="IngredientIcons" type="Node2D" parent="."]
+position = Vector2(0, -60)
 
-[node name="Sprite2D" type="Sprite2D" parent="IngredientIcons"]
-position = Vector2(-38, -56)
-scale = Vector2(0.265625, 0.257812)
-texture = ExtResource("3_k3xx2")
+[node name="FlavorIcon" parent="IngredientIcons" instance=ExtResource("3_gl05t")]
+position = Vector2(-50, 0)
+frame = 0
 
-[node name="Sprite2D2" type="Sprite2D" parent="IngredientIcons"]
-position = Vector2(7, -58)
-scale = Vector2(0.265625, 0.257812)
-texture = ExtResource("3_k3xx2")
+[node name="IcingIcon" parent="IngredientIcons" instance=ExtResource("3_gl05t")]
+frame = 4
+ingredient_type = 1
 
-[node name="Sprite2D3" type="Sprite2D" parent="IngredientIcons"]
-position = Vector2(47, -57)
-scale = Vector2(0.265625, 0.257812)
-texture = ExtResource("3_k3xx2")
+[node name="ToppingsIcon" parent="IngredientIcons" instance=ExtResource("3_gl05t")]
+position = Vector2(50, 0)
+frame = 7
+ingredient_type = 2
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

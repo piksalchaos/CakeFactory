@@ -1,13 +1,16 @@
 class_name Cake extends Area2D
 
-@export var speed: float = 100.0
+@export var speed: float = 50.0
 
 @onready var cake_sprite := $CakeSprite
 @onready var elements_label := $ElementsLabel
 
+@onready var flavor_icon := $IngredientIcons/FlavorIcon
+@onready var icing_icon := $IngredientIcons/IcingIcon
+@onready var toppings_icon := $IngredientIcons/ToppingsIcon
+
 var is_moving: bool = true
 var goal_cake_build: CakeBuild
-
 const elements_label_string_format = "Flavor: %s\nIcing: %s\nToppings: %s"
 
 func _ready():
@@ -17,6 +20,9 @@ func _ready():
 		CakeElements.icing_to_string(goal_cake_build.icing),
 		CakeElements.toppings_to_string(goal_cake_build.toppings)
 	]
+	flavor_icon.element = goal_cake_build.flavor
+	icing_icon.element = goal_cake_build.icing
+	toppings_icon.element = goal_cake_build.toppings
 
 func _process(delta: float):
 	if is_moving:

@@ -152,9 +152,11 @@ cake_build_elements = SubResource("Resource_yy0f8")
 [node name="Cakes" type="Node" parent="2DGameObjects"]
 
 [node name="CakeDropper" parent="2DGameObjects" node_paths=PackedStringArray("cake_parent_node") instance=ExtResource("6_14w4o")]
+position = Vector2(1068, 350)
 cake_parent_node = NodePath("../Cakes")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3

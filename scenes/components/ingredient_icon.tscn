@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://3t2bje7d3h4b"]
+
+[ext_resource type="Texture2D" uid="uid://r826qegl5ctu" path="res://images/ingredient_icons.png" id="1_74w88"]
+[ext_resource type="Script" path="res://scripts/components/ingredient_icon.gd" id="2_o2uc3"]
+
+[node name="IngredientIcon" type="Sprite2D"]
+texture = ExtResource("1_74w88")
+hframes = 3
+vframes = 3
+frame = 1
+script = ExtResource("2_o2uc3")

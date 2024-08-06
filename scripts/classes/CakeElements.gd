@@ -1,4 +1,4 @@
-class_name CakeElements extends Node
+class_name CakeElements extends Resource
 
 enum Flavor {
 	NONE,
