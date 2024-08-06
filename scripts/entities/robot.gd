@@ -1,7 +1,5 @@
 extends Node2D
 
-const PLACEMENT_DISTANCE: float = 150.0
-
 enum Placement {
 	TOP = -1,
 	MIDDLE,
@@ -29,7 +27,7 @@ func _unhandled_key_input(event):
 
 func _update_position():
 	var old_y_position = position.y
-	position.y = placement * PLACEMENT_DISTANCE + screen_size.y/2
+	position.y = placement * GameConstants.TILE_WIDTH + screen_size.y/2
 	var y_position_difference = position.y - old_y_position
 	for area in cake_detection_area.get_overlapping_areas():
 		if area is Cake:

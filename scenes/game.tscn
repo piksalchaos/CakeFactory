@@ -100,7 +100,7 @@ position = Vector2(490, 354)
 position = Vector2(493, 493)
 
 [node name="ConveyorBelt7" parent="2DGameObjects/ConveyorBelts" instance=ExtResource("2_o8igl")]
-position = Vector2(207, 206)
+position = Vector2(201, 203)
 
 [node name="ConveyorBelt8" parent="2DGameObjects/ConveyorBelts" instance=ExtResource("2_o8igl")]
 position = Vector2(202, 352)
@@ -142,7 +142,7 @@ position = Vector2(202, 197)
 cake_build_elements = SubResource("Resource_rhmr0")
 
 [node name="CandyToppingsMachine" parent="2DGameObjects/Machines" instance=ExtResource("4_cr101")]
-position = Vector2(193, 355)
+position = Vector2(201, 347)
 cake_build_elements = SubResource("Resource_ymehe")
 
 [node name="SprinklesToppingMachine" parent="2DGameObjects/Machines" instance=ExtResource("4_cr101")]
