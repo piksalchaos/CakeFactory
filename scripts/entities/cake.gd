@@ -8,6 +8,7 @@ class_name Cake extends Area2D
 @onready var flavor_icon := $IngredientIcons/FlavorIcon
 @onready var icing_icon := $IngredientIcons/IcingIcon
 @onready var toppings_icon := $IngredientIcons/ToppingsIcon
+@onready var ingredient_icons := $IngredientIcons
 
 var is_moving: bool = true
 var goal_cake_build: CakeBuild
@@ -20,9 +21,9 @@ func _ready():
 		CakeElements.icing_to_string(goal_cake_build.icing),
 		CakeElements.toppings_to_string(goal_cake_build.toppings)
 	]
-	flavor_icon.element = goal_cake_build.flavor
-	icing_icon.element = goal_cake_build.icing
-	toppings_icon.element = goal_cake_build.toppings
+	flavor_icon.element = goal_cake_build.flavor-1
+	icing_icon.element = goal_cake_build.icing-1
+	toppings_icon.element = goal_cake_build.toppings-1
 
 func _process(delta: float):
 	if is_moving:
@@ -33,10 +34,13 @@ func _on_area_entered(area):
 		cake_sprite.add_cake_elements(area.cake_build_elements)
 
 func _on_area_exited(_area):
-	stop_moving_if_fallen()
+	if not is_on_conveyor() and is_moving:
+		cake_sprite.show_fallen_sprite()
+		ingredient_icons.visible = false
+		is_moving = false
 
-func stop_moving_if_fallen():
-	is_moving = false
+func is_on_conveyor() -> bool:
 	for area in get_overlapping_areas():
 		if area is ConveyorBelt:
-			is_moving = true
+			return true
+	return false

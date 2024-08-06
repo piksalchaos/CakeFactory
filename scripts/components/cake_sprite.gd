@@ -4,12 +4,14 @@ extends Sprite2D
 @onready var flavor_sprite = $FlavorSprite
 @onready var icing_sprite = $IcingSprite
 @onready var toppings_sprite = $ToppingsSprite
+@onready var fallen_sprite = $FallenSprite
 
 func _ready():
 	ingredients_sprite.visible = true
 	flavor_sprite.visible = false
 	icing_sprite.visible = false
 	toppings_sprite.visible = false
+	fallen_sprite.visible = false
 
 func add_cake_elements(cake_elements: CakeBuild):
 	if cake_elements.flavor != CakeElements.Flavor.NONE:
@@ -23,6 +25,13 @@ func add_cake_elements(cake_elements: CakeBuild):
 	if cake_elements.toppings != CakeElements.Toppings.NONE:
 		toppings_sprite.visible = true
 		toppings_sprite.frame = cake_elements.toppings-1
+
+func show_fallen_sprite():
+	ingredients_sprite.visible = false
+	flavor_sprite.visible = false
+	icing_sprite.visible = false
+	toppings_sprite.visible = false
+	fallen_sprite.visible = true
 
 #func change_flavor_sprite(flavor: CakeBuild.Flavor):
 	#match flavor:
