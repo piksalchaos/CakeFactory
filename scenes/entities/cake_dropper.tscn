@@ -13,7 +13,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("1_hkp2v")
 
 [node name="CakeSpawnTimer" type="Timer" parent="."]
-wait_time = 8.0
+wait_time = 14.0
 autostart = true
 
 [connection signal="timeout" from="CakeSpawnTimer" to="." method="_on_cake_spawn_timer_timeout"]
