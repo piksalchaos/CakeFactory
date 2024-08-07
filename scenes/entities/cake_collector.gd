@@ -1,0 +1,1 @@
+class_name CakeCollector extends Area2D

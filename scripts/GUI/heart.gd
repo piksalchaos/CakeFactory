@@ -1,10 +1,15 @@
-extends TextureRect
+extends Sprite2D
 
-@onready var explosion = $Explosion
+@onready var explosion_sprite := $ExplosionSprite
+@onready var animation_player := $AnimationPlayer
+
+func ready():
+	explosion_sprite.visible = false
 
 func explode():
-	explosion.visible = true
-	explosion.play()
+	explosion_sprite.visible = true
+	animation_player.play('explosion')
 
-func _on_explosion_finished():
-	queue_free()
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == 'explosion':
+		queue_free()

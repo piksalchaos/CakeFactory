@@ -1,36 +1,187 @@
-[gd_scene load_steps=7 format=3 uid="uid://b2c1eapipx143"]
+[gd_scene load_steps=25 format=3 uid="uid://b2c1eapipx143"]
 
 [ext_resource type="Texture2D" uid="uid://efmw660d65bh" path="res://images/heart.png" id="1_fi40m"]
 [ext_resource type="Texture2D" uid="uid://bsqhkctcdqra2" path="res://images/explosion.png" id="2_6271t"]
 [ext_resource type="Script" path="res://scripts/GUI/heart.gd" id="2_s1vxp"]
-[ext_resource type="Script" path="res://scripts/GUI/texture_rect_animator.gd" id="3_datos"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dnkq2"]
 atlas = ExtResource("1_fi40m")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3der2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hu2aw"]
 atlas = ExtResource("2_6271t")
 region = Rect2(0, 0, 200, 300)
 
-[node name="Heart" type="TextureRect"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dien"]
+atlas = ExtResource("2_6271t")
+region = Rect2(200, 0, 200, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rix4l"]
+atlas = ExtResource("2_6271t")
+region = Rect2(400, 0, 200, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qs3uh"]
+atlas = ExtResource("2_6271t")
+region = Rect2(600, 0, 200, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gcwmu"]
+atlas = ExtResource("2_6271t")
+region = Rect2(800, 0, 200, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8i4n"]
+atlas = ExtResource("2_6271t")
+region = Rect2(1000, 0, 200, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjt5f"]
+atlas = ExtResource("2_6271t")
+region = Rect2(1200, 0, 200, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2f2y"]
+atlas = ExtResource("2_6271t")
+region = Rect2(1400, 0, 200, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atvs0"]
+atlas = ExtResource("2_6271t")
+region = Rect2(1600, 0, 200, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vr1mc"]
+atlas = ExtResource("2_6271t")
+region = Rect2(1800, 0, 200, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0khq"]
+atlas = ExtResource("2_6271t")
+region = Rect2(2000, 0, 200, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1aaby"]
+atlas = ExtResource("2_6271t")
+region = Rect2(2200, 0, 200, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mg1wx"]
+atlas = ExtResource("2_6271t")
+region = Rect2(2400, 0, 200, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lojs7"]
+atlas = ExtResource("2_6271t")
+region = Rect2(2600, 0, 200, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usdas"]
+atlas = ExtResource("2_6271t")
+region = Rect2(2800, 0, 200, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lah3w"]
+atlas = ExtResource("2_6271t")
+region = Rect2(3000, 0, 200, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1q5f"]
+atlas = ExtResource("2_6271t")
+region = Rect2(3200, 0, 200, 300)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_32oko"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hu2aw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dien")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rix4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qs3uh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gcwmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8i4n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjt5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2f2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atvs0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vr1mc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0khq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1aaby")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mg1wx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lojs7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usdas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lah3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1q5f")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="Animation" id="Animation_3x6o4"]
+resource_name = "explosion"
+length = 2.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ExplosionSprite")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ee0fv"]
+_data = {
+"explosion": SubResource("Animation_3x6o4")
+}
+
+[node name="Heart" type="Sprite2D"]
 texture = SubResource("AtlasTexture_dnkq2")
-stretch_mode = 1
 script = ExtResource("2_s1vxp")
 
-[node name="Explosion" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 32.0
-offset_right = 232.0
-offset_bottom = 332.0
+[node name="ExplosionSprite" type="AnimatedSprite2D" parent="."]
+visible = false
 scale = Vector2(0.5, 0.5)
-pivot_offset = Vector2(-100, -150)
-texture = SubResource("AtlasTexture_3der2")
-script = ExtResource("3_datos")
-frame_width = 200
-frame_height = 300
-number_of_frames = 17
-frame_time = 0.08
+sprite_frames = SubResource("SpriteFrames_32oko")
 
-[connection signal="finished" from="Explosion" to="." method="_on_explosion_finished"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ee0fv")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

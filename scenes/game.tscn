@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cgiywwbegoath"]
+[gd_scene load_steps=19 format=3 uid="uid://cgiywwbegoath"]
 
 [ext_resource type="PackedScene" uid="uid://dft15jplik5ow" path="res://scenes/entities/robots/robot.tscn" id="1_5sdxi"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_d0mor"]
@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://b8lt17ktrp3p1" path="res://scenes/entities/machine.tscn" id="4_cr101"]
 [ext_resource type="Script" path="res://scripts/classes/CakeBuild.gd" id="4_tfl45"]
 [ext_resource type="PackedScene" uid="uid://dx5nae8gh0crj" path="res://scenes/entities/cake_dropper.tscn" id="6_14w4o"]
+[ext_resource type="PackedScene" uid="uid://dkp0qfo1xyybe" path="res://scenes/entities/cake_collector.tscn" id="7_7jkuy"]
 [ext_resource type="PackedScene" uid="uid://b0q5wtjyosmf6" path="res://scenes/GUI/heart_display.tscn" id="7_srwus"]
+[ext_resource type="Script" path="res://scenes/entities/cake_collector.gd" id="8_imaqp"]
 
 [sub_resource type="Resource" id="Resource_mdrqd"]
 script = ExtResource("4_tfl45")
@@ -85,6 +87,9 @@ down_input_action = "right_down"
 
 [node name="ConveyorBelts" type="Node2D" parent="2DGameObjects"]
 
+[node name="ConveyorBelt10" parent="2DGameObjects/ConveyorBelts" instance=ExtResource("2_o8igl")]
+position = Vector2(1095, 2)
+
 [node name="ConveyorBelt" parent="2DGameObjects/ConveyorBelts" instance=ExtResource("2_o8igl")]
 position = Vector2(812, -136)
 
@@ -104,16 +109,16 @@ position = Vector2(520, 5)
 position = Vector2(523, 144)
 
 [node name="ConveyorBelt7" parent="2DGameObjects/ConveyorBelts" instance=ExtResource("2_o8igl")]
-position = Vector2(231, -146)
+position = Vector2(76, -147)
+scale = Vector2(3, 1)
 
 [node name="ConveyorBelt8" parent="2DGameObjects/ConveyorBelts" instance=ExtResource("2_o8igl")]
-position = Vector2(232, 3)
+position = Vector2(72, 0)
+scale = Vector2(3, 1)
 
 [node name="ConveyorBelt9" parent="2DGameObjects/ConveyorBelts" instance=ExtResource("2_o8igl")]
-position = Vector2(235, 142)
-
-[node name="ConveyorBelt10" parent="2DGameObjects/ConveyorBelts" instance=ExtResource("2_o8igl")]
-position = Vector2(1095, 2)
+position = Vector2(72, 150)
+scale = Vector2(3, 1)
 
 [node name="Machines" type="Node2D" parent="2DGameObjects"]
 
@@ -159,17 +164,17 @@ cake_build_elements = SubResource("Resource_yy0f8")
 position = Vector2(1098, 1)
 cake_parent_node = NodePath("../Cakes")
 
+[node name="CakeCollector" parent="2DGameObjects" instance=ExtResource("7_7jkuy")]
+position = Vector2(-237, 0)
+script = ExtResource("8_imaqp")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HUD" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 1.0
-offset_top = 11.0
-offset_right = 41.0
-offset_bottom = 51.0
 
 [node name="HeartDisplay" parent="CanvasLayer/HUD" instance=ExtResource("7_srwus")]
-layout_mode = 0
+position = Vector2(40, 40)
 
 [connection signal="child_entered_tree" from="2DGameObjects/Cakes" to="." method="_on_cakes_child_entered_tree"]

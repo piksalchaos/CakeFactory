@@ -9,6 +9,7 @@ signal oofed
 		position.y = row_value * GameConstants.TILE_WIDTH
 
 var is_moving: bool = true
+var has_reached_end: bool = false
 var goal_cake_build: CakeBuild
 
 @onready var cake_sprite := $CakeSprite
@@ -30,6 +31,11 @@ func _process(delta: float):
 		position.x -= speed * delta
 
 func _on_area_entered(area):
+	if area is CakeCollector:
+		has_reached_end = true
+		queue_free()
+		return
+	
 	if area is Machine:
 		var build_elements = area.cake_build_elements
 		var is_machine_incorrect = false
@@ -46,8 +52,8 @@ func _on_area_entered(area):
 		if is_machine_incorrect:
 			oofed.emit()
 
-func _on_area_exited(_area):
-	if not is_on_conveyor() and is_moving:
+func _on_area_exited(area):
+	if not has_reached_end and is_moving and not is_on_conveyor():
 		cake_sprite.show_fallen_sprite()
 		animation_player.play("fade")
 		ingredient_icons.visible = false
