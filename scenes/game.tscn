@@ -64,99 +64,100 @@ toppings = 3
 [node name="Game" type="Node"]
 
 [node name="2DGameObjects" type="Node2D" parent="."]
+position = Vector2(0, 360)
 
-[node name="Robots" type="Node" parent="2DGameObjects"]
+[node name="Robots" type="Node2D" parent="2DGameObjects"]
 
 [node name="LeftRobot" parent="2DGameObjects/Robots" instance=ExtResource("1_5sdxi")]
-position = Vector2(347, 351)
+position = Vector2(377, 2)
 up_input_action = "left_up"
 down_input_action = "left_down"
 
 [node name="MiddleRobot" parent="2DGameObjects/Robots" instance=ExtResource("1_5sdxi")]
-position = Vector2(638, 355)
+position = Vector2(668, 6)
 
 [node name="RightRobot" parent="2DGameObjects/Robots" instance=ExtResource("1_5sdxi")]
-position = Vector2(923, 350)
+position = Vector2(953, 1)
 up_input_action = "right_up"
 down_input_action = "right_down"
 
-[node name="ConveyorBelts" type="Node" parent="2DGameObjects"]
+[node name="ConveyorBelts" type="Node2D" parent="2DGameObjects"]
 
 [node name="ConveyorBelt" parent="2DGameObjects/ConveyorBelts" instance=ExtResource("2_o8igl")]
-position = Vector2(782, 213)
+position = Vector2(812, -136)
 
 [node name="ConveyorBelt2" parent="2DGameObjects/ConveyorBelts" instance=ExtResource("2_o8igl")]
-position = Vector2(780, 351)
+position = Vector2(810, 2)
 
 [node name="ConveyorBelt3" parent="2DGameObjects/ConveyorBelts" instance=ExtResource("2_o8igl")]
-position = Vector2(773, 497)
+position = Vector2(803, 148)
 
 [node name="ConveyorBelt4" parent="2DGameObjects/ConveyorBelts" instance=ExtResource("2_o8igl")]
-position = Vector2(495, 208)
+position = Vector2(525, -141)
 
 [node name="ConveyorBelt5" parent="2DGameObjects/ConveyorBelts" instance=ExtResource("2_o8igl")]
-position = Vector2(490, 354)
+position = Vector2(520, 5)
 
 [node name="ConveyorBelt6" parent="2DGameObjects/ConveyorBelts" instance=ExtResource("2_o8igl")]
-position = Vector2(493, 493)
+position = Vector2(523, 144)
 
 [node name="ConveyorBelt7" parent="2DGameObjects/ConveyorBelts" instance=ExtResource("2_o8igl")]
-position = Vector2(201, 203)
+position = Vector2(231, -146)
 
 [node name="ConveyorBelt8" parent="2DGameObjects/ConveyorBelts" instance=ExtResource("2_o8igl")]
-position = Vector2(202, 352)
+position = Vector2(232, 3)
 
 [node name="ConveyorBelt9" parent="2DGameObjects/ConveyorBelts" instance=ExtResource("2_o8igl")]
-position = Vector2(205, 491)
+position = Vector2(235, 142)
 
 [node name="ConveyorBelt10" parent="2DGameObjects/ConveyorBelts" instance=ExtResource("2_o8igl")]
-position = Vector2(1065, 351)
+position = Vector2(1095, 2)
 
-[node name="Machines" type="Node" parent="2DGameObjects"]
+[node name="Machines" type="Node2D" parent="2DGameObjects"]
 
 [node name="VanillaFlavorMachine" parent="2DGameObjects/Machines" instance=ExtResource("4_cr101")]
-position = Vector2(778, 212)
+position = Vector2(808, -137)
 cake_build_elements = SubResource("Resource_mdrqd")
 
 [node name="ChocolateFlavorMachine" parent="2DGameObjects/Machines" instance=ExtResource("4_cr101")]
-position = Vector2(780, 353)
+position = Vector2(810, 4)
 cake_build_elements = SubResource("Resource_rkna6")
 
 [node name="IceCreamFlavorMachine" parent="2DGameObjects/Machines" instance=ExtResource("4_cr101")]
-position = Vector2(777, 494)
+position = Vector2(807, 145)
 cake_build_elements = SubResource("Resource_e8h2k")
 
 [node name="VanillaIcingMachine" parent="2DGameObjects/Machines" instance=ExtResource("4_cr101")]
-position = Vector2(488, 204)
+position = Vector2(518, -145)
 cake_build_elements = SubResource("Resource_m2rt3")
 
 [node name="ChocolateIcingMachine" parent="2DGameObjects/Machines" instance=ExtResource("4_cr101")]
-position = Vector2(494, 349)
+position = Vector2(524, 0)
 cake_build_elements = SubResource("Resource_lttci")
 
 [node name="StrawberryIcingMachine" parent="2DGameObjects/Machines" instance=ExtResource("4_cr101")]
-position = Vector2(492, 499)
+position = Vector2(522, 150)
 cake_build_elements = SubResource("Resource_cggh6")
 
 [node name="FruitToppingsMachine" parent="2DGameObjects/Machines" instance=ExtResource("4_cr101")]
-position = Vector2(202, 197)
+position = Vector2(232, -152)
 cake_build_elements = SubResource("Resource_rhmr0")
 
 [node name="CandyToppingsMachine" parent="2DGameObjects/Machines" instance=ExtResource("4_cr101")]
-position = Vector2(201, 347)
+position = Vector2(231, -2)
 cake_build_elements = SubResource("Resource_ymehe")
 
 [node name="SprinklesToppingMachine" parent="2DGameObjects/Machines" instance=ExtResource("4_cr101")]
-position = Vector2(199, 493)
+position = Vector2(229, 144)
 cake_build_elements = SubResource("Resource_yy0f8")
 
-[node name="Cakes" type="Node" parent="2DGameObjects"]
+[node name="Cakes" type="Node2D" parent="2DGameObjects"]
 
 [node name="Cake" parent="2DGameObjects/Cakes" instance=ExtResource("3_7ij8r")]
-position = Vector2(1066, 347)
+position = Vector2(1096, -2)
 
 [node name="CakeDropper" parent="2DGameObjects" node_paths=PackedStringArray("cake_parent_node") instance=ExtResource("6_14w4o")]
-position = Vector2(1068, 350)
+position = Vector2(1098, 1)
 cake_parent_node = NodePath("../Cakes")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

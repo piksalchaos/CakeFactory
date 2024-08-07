@@ -1,6 +1,10 @@
 class_name Cake extends Area2D
 
 @export var speed: float = 50.0
+@export_range(-1,1) var row: int = 0:
+	set(row_value):
+			row = row_value
+			position.y = row_value * GameConstants.TILE_WIDTH
 
 var is_moving: bool = true
 var goal_cake_build: CakeBuild
