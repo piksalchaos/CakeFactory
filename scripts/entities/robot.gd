@@ -10,9 +10,9 @@ enum Placement {
 @export var down_input_action: String = 'middle_down'
 @export var placement: Placement = Placement.MIDDLE
 
-@onready var cake_detection_area := $CakeDetectionArea
-
 var screen_size: Vector2
+
+@onready var cake_detection_area := $CakeDetectionArea
 
 func _ready():
 	screen_size = get_viewport_rect().size
