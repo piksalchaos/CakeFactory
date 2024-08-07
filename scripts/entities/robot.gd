@@ -23,4 +23,4 @@ func _update_row(row_value):
 	row = row_value
 	position.y = row_value * GameConstants.TILE_WIDTH
 	for area in cake_detection_area.get_overlapping_areas():
-		if area is Cake: area.row = row
+		if area is Cake: area.move_row_to(row)
