@@ -52,7 +52,7 @@ func _on_area_entered(area):
 		if is_machine_incorrect:
 			oofed.emit()
 
-func _on_area_exited(area):
+func _on_area_exited(_area):
 	if not has_reached_end and is_moving and not is_on_conveyor():
 		cake_sprite.show_fallen_sprite()
 		animation_player.play("fade")
